@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+  --background-white: #f5f5f5;
+  --background-base: linear-gradient(0deg, rgba(223,44,111,1) 0%, rgba(179,9,63,1) 39%);
+  --color-red: #b3093f;
+  --color-green: #04d361;
+  --color-green-light: #94f1be;
+  --color-vinho: #451531;
+  --color-vinho-base: #723c5c;
+  --color-blue-light: #a5befa;
+  --color-blue: #64b7cc;
+  --color-pink: #ff3877;
+  --color-orange: #f44e3f;
+  --color-salmon: #f4796b ;
+  --color-salmon-light: #f4998d;
+}
+
+body {
+  background: var(--background-white);
+}
+
+section.landing-agents {
+  width: 100%;
+}
+
+section.landing-agents aside {
+  width: 70px;
+  height: 100vh;
+  background: var(--background-base);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+}
+
+section.landing-agents aside div.logo {
+  width: 50px;
+  height: 50px;
+  background: lightgray;
+  border-radius: 50px;
+}
+
+section.landing-agents aside button {
+  width: 46px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--color-pink);
+  background: var(--color-red);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+section.landing-agents aside button:hover {
+  opacity: .6;
+  -webkit-box-shadow: 0 0 5px #fff;
+          box-shadow: 0 0 5px #fff;
+}
+
+section.landing-agents div.section-agents {
+  width: 100%;
+  height: 600px;
+}
+
+section.landing-agents div.section-agents div.title-agents {
+  height: 180px;
+  background: var(--color-red);
+}
+
+section.landing-agents div.section-agents div.title-agents div.content-title {
+  max-width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.landing-agents div.section-agents div.title-agents div.content-title h1 {
+  font-size: 30px;
+}
+
+section.landing-agents div.section-agents div.title-agents div.content-title div.cont-agents {
+  max-width: 300px;
+  height: 50px;
+  border: 1px solid lightgreen;
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+section.landing-agents div.section-agents div.title-agents div.content-title div.cont-agents p {
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+section.landing-agents div.section-agents div.title-agents div.content-title div.cont-agents:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+section.landing-agents div.section-agents div.container-agents {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 30px 0 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent {
+  width: 600px;
+  height: 451px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.profile {
+  width: 300px;
+  height: 70px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.profile div.name-ocupation {
+  padding-left: 10px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.profile div.name-ocupation h1 {
+  color: var(--color-vinho);
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.profile div.name-ocupation p {
+  color: var(--color-vinho-base);
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.bio p {
+  max-width: 500px;
+  color: var(--color-pink);
+  padding: 20px 0 30px 20px;
+  text-align: justify;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.day-hour {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours {
+  background: var(--background-white);
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.day {
+  color: var(--color-pink);
+  padding-bottom: 15px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.day h1 {
+  padding-top: 5px;
+  font-size: 20px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.hours {
+  color: var(--color-pink);
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.hours h1 {
+  padding-top: 5px;
+  font-size: 20px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours.notActive {
+  opacity: .4;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.footer {
+  width: 100%;
+  height: 80px;
+  background: #f8f5f5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 17px;
+  padding: 20px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.footer div.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.footer div.price p {
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--color-vinho);
+  padding-right: 15px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.footer div.price span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-pink);
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.footer button {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-vinho);
+  background: var(--color-green-light);
+  border: 1px solid var(--color-green);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.footer button img {
+  padding-right: 8px;
+}
+
+section.landing-agents div.section-agents div.container-agents div.agent div.footer button:hover {
+  opacity: .8;
+}
+/*# sourceMappingURL=agents.css.map */

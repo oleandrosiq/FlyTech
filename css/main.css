@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+  --background-white: #f5f5f5;
+  --background-base: linear-gradient(0deg, rgba(223,44,111,1) 0%, rgba(179,9,63,1) 39%);
+  --color-red: #b3093f;
+  --color-green: #04d361;
+  --color-green-light: #94f1be;
+  --color-vinho: #451531;
+  --color-vinho-base: #723c5c;
+  --color-blue-light: #a5befa;
+  --color-blue: #64b7cc;
+  --color-pink: #ff3877;
+  --color-orange: #f44e3f;
+  --color-salmon: #f4796b ;
+  --color-salmon-light: #f4998d;
+}
+
+body {
+  background: var(--background-base);
+}
+
+section.home-page {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+section.home-page header {
+  padding: 15px 0 20px 0;
+}
+
+section.home-page header div.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background: var(--color-shape);
+}
+
+section.home-page div.container-home {
+  width: 100%;
+  background: gray;
+}
+
+section.home-page div.container-home div.group-buttons {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 500px;
+  padding-top: 100px;
+  border: 1px solid var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.home-page div.container-home div.group-buttons div.client-user {
+  width: 300px;
+  height: 400px;
+  background: var(--color-shape-hover);
+}
+
+section.home-page div.container-home div.group-buttons div.prof-user {
+  width: 300px;
+  height: 400px;
+  background: var(--color-shape-hover);
+}
+/*# sourceMappingURL=main.css.map */

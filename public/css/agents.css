@@ -12,6 +12,7 @@ html, body {
 
 :root {
   --background-white: #f5f5f5;
+  --background-input: #E6E6F0;
   --background-base: linear-gradient(0deg, #df2c6f 0%, rgba(179,9,63,1) 39%);
   --color-red: #b3093f;
   --color-green: #04d361;
@@ -25,6 +26,8 @@ html, body {
   --color-salmon: #f4796b ;
   --color-salmon-light: #f4998d;
   --color-day: #5a5a68;
+  --color-title: #303042;
+  --color-text-form: #9C98A6;
 }
 
 body {
@@ -208,7 +211,7 @@ section.landing-agents div.section-agents div.container-agents div.agent div.pro
 section.landing-agents div.section-agents div.container-agents div.agent div.bio p {
   max-width: 500px;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--color-shape);
   padding: 20px 0 30px 20px;
   text-align: justify;

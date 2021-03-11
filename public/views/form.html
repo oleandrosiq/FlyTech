@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formulário | Flestyle</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link href="/public/css/form.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="landing-form">
+      <aside>
+        <div class="logo"></div>
+  
+        <button type="button"><img src="/public/assets/images/arrow.svg" alt="Voltar para Lista de Profissionais Flestyle"></button>
+      </aside>
+
+      <div class="section-form">
+        <div class="title-form">
+          <div class="content-title">
+            <div class="title">
+              <h1>Preencha o formulário abaixo, <br /> E venha ser um Flestyle com a gente.</h1>
+              <p>O primeiro passo, é preencher esse
+                formulário de inscrição.
+              </p>
+            </div>
+
+            <div class="cont-agents">
+              <img src="/public/assets/images/Group 8.svg" alt="Emote Rostinho Feliz.">
+
+              <p>Preparare-se!<br />
+                vai ser o máximo.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="box-form">
+
+          <form id="form" accept="">
+            <div class="title">
+              <h1>Seus dados</h1>
+              <hr />
+            </div>
+
+            <div class="one-input">
+              <label for="name">Nome completo</label>
+              <input id="name" type="text" />
+            </div>
+
+            <div class="two-input">
+              <div class="box-input">
+                <label for="photo">Link da sua foto <small>(comece com https://)</small></label>
+                <input id="photo" type="text" />
+              </div>
+
+              <div class="box-input">
+                <label for="whats">Whatsapp <small>(Apenas numeros)</small></label>
+                <input id="whats" type="number" />
+              </div>
+            </div>
+
+            <div class="one-input">
+              <label for="name">Biografia <small>(Maximo 300 caracteres)</small></label>
+              <textarea name="bio" maxlength="320"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-import { app } from './app.js'
+import { app } from './app'
 import express from 'express'
 import ejs from 'ejs'
 import path from 'path'

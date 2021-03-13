@@ -23,16 +23,9 @@ section.landing-form {
     position: fixed;
     
     div.logo {
-      width: 50px;
-      height: 50px;
-
-      // background: lightgray;
-      border-radius: 50px;
-
       img {
-        width: 100px;
-      }      
-
+        width: 80px;
+      }
     }
 
     button {
@@ -59,6 +52,7 @@ section.landing-form {
 
   div.section-form {
     width: 100%;
+    padding-bottom: 100px;
     
     div.title-form { 
       height: 300px;
@@ -115,7 +109,6 @@ section.landing-form {
 
     div.box-form {
       width: 800px;
-      height: 900px;
 
       margin: -30px auto;
       padding: 25px;
@@ -126,7 +119,6 @@ section.landing-form {
 
       form {
         width: 100%;
-        height: 100%;
 
         background: var(--background-white);
 
@@ -147,8 +139,6 @@ section.landing-form {
         }
 
         div.one-input {
-          height: 80px;
-
           margin-top: 30px;
         }
 
@@ -227,13 +217,121 @@ section.landing-form {
         }
 
         div.title.service {
-          margin-top: 140px;
+          margin-top: 30px;
         }
 
+        div.weekdays {
+          width: 100%;
+          margin-top: 20px;
+
+          p {
+            color: var(--color-text-form);
+            padding: 10px 0;
+          }
+
+          div.container-weekdays {
+            width: 100%;
+
+            display: flex;
+
+            div.box-check {
+              width: 20%;
+
+              ul {
+                list-style: none;
+
+                li {
+                  width: 130px;
+                  height: 20px;
+
+                  display: flex;
+                  align-items: center;
+                  margin-top: 10px;
+
+
+                  input {
+                    width: initial;
+                    height: 50px;
+                    cursor: pointer;
+                  }
+
+                  label {
+                    padding-left: 8px;
+                    color: var(--color-text-form);
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+
+            div.box-time {
+              width: 80%;
+
+              p {
+                color: var(--color-red);
+              }
+
+              div.time-container {
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                gap: 20px;
+
+                padding-right: 50px;
+
+              }
+            }
+          }
+        }  
+
+        div.footer {
+          width: 100%;
+          height: 100px;
+          
+          background: var(--background-input);
+
+          margin-top: 20px;
+          border-radius: 10px;
+          padding: 20px;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          div.info {
+            display: flex;
+            align-items: center;
+
+            p {
+              padding-left: 10px;
+              color: var(--color-red);
+            }
+          }
+
+          button {
+            width: 140px;
+            height: 45px;
+
+            background: var(--color-green);
+            border: 1px solid var(--color-title);
+            border-radius: 5px;
+
+            font-size: 16px;
+            color: var(--color-title);
+            
+            transition: .2s;
+            cursor: pointer;
+
+            &:hover {
+              opacity: .8;
+            }
+          }
+
+        }
       }
     }
-
-
   }
 }
 

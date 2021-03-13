@@ -44,7 +44,6 @@
         </div>
 
         <div class="box-form">
-
           <form id="form" accept="">
             <div class="title">
               <h1>Seus dados</h1>
@@ -54,6 +53,18 @@
             <div class="one-input">
               <label for="name">Nome completo</label>
               <input id="name" type="text" />
+            </div>
+
+            <div class="two-input">
+              <div class="box-input">
+                <label for="email">Email</label>
+                <input id="email" type="email" />
+              </div>
+
+              <div class="box-input">
+                <label for="senha">Senha</label>
+                <input id="senha" type="password" />
+              </div>
             </div>
 
             <div class="two-input">
@@ -94,6 +105,72 @@
               <input id="priceMin" type="number" placeholder="R$ minimo" />
               <input id="priceMax" type="number" placeholder="R$ maximo" />
             </div>
+
+            <div class="weekdays">
+              <p>Selecione o dia e marque o horario (apenas dos dias disponiveis!)</p>
+
+              <div class="container-weekdays">
+                <div class="box-check">
+                  <ul id="days"> 
+                    <li>
+                      <input name="segunda" type="checkbox" id="segunda" />
+                      <label for="segunda">Segunda</label>
+                    </li>
+
+                    <li>
+                      <input name="terca" type="checkbox" id="terca" />
+                      <label for="terca">Terça</label>
+                    </li>
+
+                    <li>
+                      <input name="quarta" type="checkbox" id="quarta" />
+                      <label for="quarta">Quarta</label>
+                    </li>
+
+                    <li>
+                      <input name="quinta" type="checkbox" id="quinta" />
+                      <label for="quinta">Quinta</label>
+                    </li>
+
+                    <li>
+                      <input name="sexta" type="checkbox" id="sexta" />
+                      <label for="sexta">Sexta</label>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="box-time">
+                  <p>
+                    Marque um horario que seja acessivel para 
+                    todos os seus dias disponiveis.
+                  </p>
+
+                  <div class="time-container">
+                    <div class="time">
+                      <label>Até</label>
+                      <input type="time" />
+                    </div>
+
+                    <div class="time">
+                      <label>Das</label>
+                      <input type="time" />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="footer">
+              <div class="info">
+                <img src="/public/assets/images/warn.svg" alt="Aviso">
+                <p>Importante! <br />
+                  Preencha todos os dados</p>
+              </div>
+
+              <button type="submit">Salvar cadastro</button>
+            </div>
+
           </form>
         </div>
       </div>

@@ -8,7 +8,7 @@ section.landing-agents {
   width: 100%;
 
   aside {
-    width: 70px;
+    width: 100px;
     height: 100vh;
   
     background: var(--background-base);
@@ -22,11 +22,9 @@ section.landing-agents {
     position: fixed;
     
     div.logo {
-      width: 50px;
-      height: 50px;
-  
-      background: lightgray;
-      border-radius: 50px;
+      img {
+        width: 80px;
+      }
     }
   
     button {
@@ -48,7 +46,6 @@ section.landing-agents {
         opacity: .6;
         box-shadow: 0 0 5px #fff;
       }
-  
     }
   }
 

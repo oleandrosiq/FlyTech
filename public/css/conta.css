@@ -1,0 +1,464 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+  --background-white: #f5f5f5;
+  --background-input: #E6E6F0;
+  --background-base: linear-gradient(0deg, #df2c6f 0%, rgba(179,9,63,1) 39%);
+  --color-red: #b3093f;
+  --color-green: #04d361;
+  --color-green-light: #94f1be;
+  --color-vinho: #451531;
+  --color-vinho-base: #723c5c;
+  --color-blue-light: #a5befa;
+  --color-blue: #64b7cc;
+  --color-pink: #ff3877;
+  --color-pink-icon: #ff6193;
+  --color-orange: #f44e3f;
+  --color-salmon: #f4796b ;
+  --color-salmon-light: #f4998d;
+  --color-day: #5a5a68;
+  --color-title: #303042;
+  --color-text-form: #9C98A6;
+}
+
+body {
+  background: var(--color-red);
+}
+
+section.login {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+section.login div.container-login {
+  width: 600px;
+  height: 500px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px #fff;
+          box-shadow: 0 0 20px #fff;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.login div.container-login div.box-img {
+  width: 40%;
+  height: 100%;
+  background-image: url("/public/assets/images/background-home.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--color-red);
+}
+
+section.login div.container-login div.box-input {
+  width: 60%;
+  height: 100%;
+  background: var(--background-white);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.login div.container-login div.box-input h1 {
+  color: var(--color-title);
+  padding-bottom: 10px;
+}
+
+section.login div.container-login div.box-input p {
+  color: var(--color-day);
+}
+
+section.login div.container-login div.box-input div.group-inputs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.login div.container-login div.box-input div.group-inputs label {
+  display: block;
+  font-size: 15px;
+  color: var(--color-text-form);
+  padding-bottom: 6px;
+}
+
+section.login div.container-login div.box-input div.group-inputs input {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  font-size: 18px;
+  color: var(--color-red);
+  background: var(--background-input);
+  border: 1px solid var(--color-text-form);
+  border-radius: 10px;
+}
+
+section.login div.container-login div.box-input div.group-inputs button {
+  width: 100px;
+  height: 35px;
+  background: var(--background-base);
+  border: 1px solid var(--color-text-form);
+  font-size: 16px;
+  color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+section.login div.container-login div.box-input div.group-inputs button:hover {
+  opacity: .8;
+}
+
+section.login div.container-dashboard {
+  width: 700px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px #fff;
+          box-shadow: 0 0 20px #fff;
+}
+
+section.login div.container-dashboard div.title-dashboard {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+section.login div.container-dashboard div.title-dashboard h1 {
+  color: var(--color-title);
+  padding-bottom: 8px;
+}
+
+section.login div.container-dashboard div.title-dashboard p {
+  color: var(--color-text-form);
+}
+
+section.login div.container-dashboard div.top-dashboard {
+  width: 100%;
+  height: 120px;
+  padding: 20px;
+  background: var(--background-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.login div.container-dashboard div.top-dashboard div.img {
+  width: 100px;
+  height: 100px;
+  background: var(--background-input);
+  border-radius: 50px;
+  background-image: url("https://github.com/leandrosiq1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section.login div.container-dashboard div.top-dashboard div.input-img {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+}
+
+section.login div.container-dashboard div.top-dashboard div.input-img label {
+  display: block;
+  color: var(--color-text-form);
+}
+
+section.login div.container-dashboard div.top-dashboard div.input-img input {
+  width: 100%;
+  height: 45px;
+  padding-left: 8px;
+  margin-top: 8px;
+  background: var(--background-input);
+  border-radius: 10px;
+  border: 1px solid var(--color-text-form);
+  font-size: 16px;
+  color: var(--color-red);
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-text-form);
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard div.two-input {
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard div.two-input div.box-input-dashboard {
+  width: 100%;
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard div.two-input div.box-input-dashboard label {
+  color: var(--color-text-form);
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard div.two-input div.box-input-dashboard input {
+  width: 100%;
+  height: 45px;
+  padding-left: 8px;
+  margin-top: 8px;
+  font-size: 17px;
+  color: var(--color-red);
+  background: var(--background-input);
+  border: 1px solid var(--color-text-form);
+  border-radius: 10px;
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard div.bio {
+  width: 100%;
+  padding: 20px;
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard div.bio label {
+  color: var(--color-text-form);
+}
+
+section.login div.container-dashboard div.group-inputs-dashboard div.bio textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 18px;
+  color: var(--color-red);
+  background: var(--background-input);
+  border: 1px solid var(--color-text-form);
+  border-radius: 10px;
+  resize: none;
+}
+
+section.login div.container-dashboard div.info-service {
+  width: 100%;
+}
+
+section.login div.container-dashboard div.info-service div.select {
+  width: 100%;
+  padding: 20px;
+}
+
+section.login div.container-dashboard div.info-service div.select label {
+  display: block;
+  color: var(--color-text-form);
+}
+
+section.login div.container-dashboard div.info-service div.select select {
+  width: 100%;
+  height: 45px;
+  margin-top: 8px;
+  background: var(--background-input);
+  border-radius: 10px;
+  border: 1px solid var(--color-text-form);
+  font-size: 17px;
+  color: var(--color-red);
+  cursor: pointer;
+}
+
+section.login div.container-dashboard div.info-service div.prices {
+  width: 100%;
+  padding: 20px;
+}
+
+section.login div.container-dashboard div.info-service div.prices label {
+  display: block;
+  color: var(--color-text-form);
+}
+
+section.login div.container-dashboard div.info-service div.prices input {
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  padding-left: 10px;
+  background: var(--background-input);
+  border-radius: 10px;
+  border: 1px solid var(--color-text-form);
+  font-size: 17px;
+  color: var(--color-red);
+}
+
+section.login div.container-dashboard div.weekdays {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+section.login div.container-dashboard div.weekdays p {
+  color: var(--color-text-form);
+  padding: 10px 0;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check {
+  width: 20%;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check ul {
+  list-style: none;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check ul li {
+  width: 130px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check ul li input {
+  width: initial;
+  height: 50px;
+  cursor: pointer;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check ul li label {
+  padding-left: 8px;
+  color: var(--color-text-form);
+  cursor: pointer;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time {
+  width: 80%;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time p {
+  color: var(--color-red);
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time div.time-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 20px;
+  padding-right: 50px;
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time div.time-container label {
+  display: block;
+  color: var(--color-text-form);
+}
+
+section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time div.time-container input {
+  width: 100px;
+  height: 45px;
+  margin-top: 8px;
+  padding-left: 10px;
+  background: var(--background-input);
+  border: 1px solid var(--color-text-form);
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--color-red);
+}
+
+section.login div.container-dashboard div.footer {
+  width: 100%;
+  height: 100px;
+  background: var(--background-input);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.login div.container-dashboard div.footer button {
+  width: 150px;
+  height: 45px;
+  background: var(--color-green);
+  border-radius: 5px;
+  border: 1px solid var(--color-title);
+  font-size: 17px;
+  color: var(--color-title);
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+section.login div.container-dashboard div.footer button:hover {
+  opacity: .8;
+}
+/*# sourceMappingURL=conta.css.map */

@@ -22,6 +22,7 @@ html, body {
   --color-blue-light: #a5befa;
   --color-blue: #64b7cc;
   --color-pink: #ff3877;
+  --color-pink-icon: #ff6193;
   --color-orange: #f44e3f;
   --color-salmon: #f4796b ;
   --color-salmon-light: #f4998d;
@@ -168,7 +169,7 @@ section.landing-agents div.section-agents div.container-agents {
 }
 
 section.landing-agents div.section-agents div.container-agents div.agent {
-  width: 600px;
+  max-width: 730px;
   height: 500px;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -209,11 +210,11 @@ section.landing-agents div.section-agents div.container-agents div.agent div.pro
 }
 
 section.landing-agents div.section-agents div.container-agents div.agent div.bio p {
-  max-width: 500px;
+  max-width: 700px;
   font-size: 17px;
   font-weight: 300;
   color: var(--color-shape);
-  padding: 20px 0 30px 20px;
+  padding: 20px;
   text-align: justify;
 }
 

@@ -114,7 +114,7 @@ section.landing-agents {
       gap: 20px;
       
       div.agent {
-        width: 600px;
+        max-width: 730px;
         height: 500px;
 
         border: 1px solid lightgray;
@@ -156,12 +156,12 @@ section.landing-agents {
 
         div.bio {
           p {
-            max-width: 500px;
+            max-width: 700px;
             font-size: 17px;
             font-weight: 300;
             color: var(--color-shape);
   
-            padding: 20px 0 30px 20px;
+            padding: 20px;
             text-align: justify;
           }
         }

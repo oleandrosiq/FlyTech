@@ -1,13 +1,15 @@
 @import 'base';
 
 body {
-  background: var(--background-white);
+  // background: var(--background-white);
+  background: #fff;
 }
 
 section.landing-form {
+  display: flex;
 
   aside {
-    width: 70px;
+    width: 100px;
     height: 100vh;
 
     background: var(--background-base);
@@ -24,8 +26,13 @@ section.landing-form {
       width: 50px;
       height: 50px;
 
-      background: lightgray;
+      // background: lightgray;
       border-radius: 50px;
+
+      img {
+        width: 100px;
+      }      
+
     }
 
     button {
@@ -52,8 +59,7 @@ section.landing-form {
 
   div.section-form {
     width: 100%;
-    border: 1px solid gray;
-
+    
     div.title-form { 
       height: 300px;
       background: var(--color-red);
@@ -109,22 +115,24 @@ section.landing-form {
 
     div.box-form {
       width: 800px;
-      height: 600px;
+      height: 900px;
 
       margin: -30px auto;
       padding: 25px;
 
-      background: #fff;
-      border: 1px solid gray;
+      background: var(--background-white);
+      border: 1px solid lightgray;
       border-radius: 30px;
 
       form {
         width: 100%;
         height: 100%;
 
-        background: #fff;
+        background: var(--background-white);
 
         div.title {
+          width: 100%;
+
           h1 {
             font-size: 38px;
             color: var(--color-title);
@@ -163,7 +171,11 @@ section.landing-form {
           padding-left: 8px;
           font-size: 19px;
           color: var(--color-red);
-        }    
+        } 
+        
+        input#priceMax {
+          margin-top: 13px;
+        }
 
         textarea {
           width: 100%;
@@ -178,11 +190,26 @@ section.landing-form {
           font-size: 19px;
           color: var(--color-red);
           resize: none;
-
         }
 
         small {
           padding-left: 10px;
+        }
+
+        select {
+          width: 100%;
+          height: 45px;
+
+          border: 1px solid var(--color-text-form);
+          border-radius: 10px;
+          background: var(--background-input);
+
+          padding-left: 8px;
+
+          font-size: 19px;
+          color: var(--color-red);
+
+          cursor: pointer;
         }
 
         div.two-input {
@@ -199,8 +226,92 @@ section.landing-form {
           }
         }
 
+        div.title.service {
+          margin-top: 140px;
+        }
 
       }
+    }
+
+
+  }
+}
+
+div.modal-sucess {
+  width: 100%;
+  height: 100vh;
+
+  background: var(--background-base);
+  padding: 20px;
+
+  display: none;
+
+  div.container-modal {
+    width: 100%;
+    height: 100%;
+
+    background-image: url('/public/assets/images/background-form.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div.content-modal {
+      max-width: 500px;
+      height: 400px;
+
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        padding-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 40px;
+        color: #fff;
+        padding-bottom: 20px;
+      }
+
+      p {
+        font-size: 17px;
+        text-align: center;
+        line-height: 25px;
+        color: #fff;
+        padding-bottom: 40px;
+      }
+
+      button {
+        width: 140px;
+        height: 45px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+
+        background: var(--color-green);
+        border-radius: 5px;
+        border: 1px solid var(--color-day);
+
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+
     }
 
 

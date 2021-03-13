@@ -22,6 +22,7 @@ html, body {
   --color-blue-light: #a5befa;
   --color-blue: #64b7cc;
   --color-pink: #ff3877;
+  --color-pink-icon: #ff6193;
   --color-orange: #f44e3f;
   --color-salmon: #f4796b ;
   --color-salmon-light: #f4998d;
@@ -31,11 +32,17 @@ html, body {
 }
 
 body {
-  background: var(--background-white);
+  background: #fff;
+}
+
+section.landing-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 section.landing-form aside {
-  width: 70px;
+  width: 100px;
   height: 100vh;
   background: var(--background-base);
   padding: 10px;
@@ -58,8 +65,11 @@ section.landing-form aside {
 section.landing-form aside div.logo {
   width: 50px;
   height: 50px;
-  background: lightgray;
   border-radius: 50px;
+}
+
+section.landing-form aside div.logo img {
+  width: 100px;
 }
 
 section.landing-form aside button {
@@ -90,7 +100,6 @@ section.landing-form aside button:hover {
 
 section.landing-form div.section-form {
   width: 100%;
-  border: 1px solid gray;
 }
 
 section.landing-form div.section-form div.title-form {
@@ -154,18 +163,22 @@ section.landing-form div.section-form div.title-form div.content-title div.cont-
 
 section.landing-form div.section-form div.box-form {
   width: 800px;
-  height: 600px;
+  height: 900px;
   margin: -30px auto;
   padding: 25px;
-  background: #fff;
-  border: 1px solid gray;
+  background: var(--background-white);
+  border: 1px solid lightgray;
   border-radius: 30px;
 }
 
 section.landing-form div.section-form div.box-form form {
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: var(--background-white);
+}
+
+section.landing-form div.section-form div.box-form form div.title {
+  width: 100%;
 }
 
 section.landing-form div.section-form div.box-form form div.title h1 {
@@ -203,6 +216,10 @@ section.landing-form div.section-form div.box-form form input {
   color: var(--color-red);
 }
 
+section.landing-form div.section-form div.box-form form input#priceMax {
+  margin-top: 13px;
+}
+
 section.landing-form div.section-form div.box-form form textarea {
   width: 100%;
   height: 160px;
@@ -217,6 +234,18 @@ section.landing-form div.section-form div.box-form form textarea {
 
 section.landing-form div.section-form div.box-form form small {
   padding-left: 10px;
+}
+
+section.landing-form div.section-form div.box-form form select {
+  width: 100%;
+  height: 45px;
+  border: 1px solid var(--color-text-form);
+  border-radius: 10px;
+  background: var(--background-input);
+  padding-left: 8px;
+  font-size: 19px;
+  color: var(--color-red);
+  cursor: pointer;
 }
 
 section.landing-form div.section-form div.box-form form div.two-input {
@@ -236,5 +265,99 @@ section.landing-form div.section-form div.box-form form div.two-input {
 section.landing-form div.section-form div.box-form form div.two-input div.box-input {
   width: 100%;
   margin-top: 30px;
+}
+
+section.landing-form div.section-form div.box-form form div.title.service {
+  margin-top: 140px;
+}
+
+div.modal-sucess {
+  width: 100%;
+  height: 100vh;
+  background: var(--background-base);
+  padding: 20px;
+  display: none;
+}
+
+div.modal-sucess div.container-modal {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/assets/images/background-form.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.modal-sucess div.container-modal div.content-modal {
+  max-width: 500px;
+  height: 400px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.modal-sucess div.container-modal div.content-modal img {
+  padding-bottom: 30px;
+}
+
+div.modal-sucess div.container-modal div.content-modal h1 {
+  font-size: 40px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+div.modal-sucess div.container-modal div.content-modal p {
+  font-size: 17px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+div.modal-sucess div.container-modal div.content-modal button {
+  width: 140px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--color-green);
+  border-radius: 5px;
+  border: 1px solid var(--color-day);
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+div.modal-sucess div.container-modal div.content-modal button:hover {
+  opacity: .8;
 }
 /*# sourceMappingURL=form.css.map */

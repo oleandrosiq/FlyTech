@@ -12,9 +12,12 @@
     <link href="/public/css/form.css" rel="stylesheet">
   </head>
   <body>
+
     <section class="landing-form">
       <aside>
-        <div class="logo"></div>
+        <div class="logo">
+          <img src="/public/assets/images/logo1.png" alt="Logo" />
+        </div>
   
         <button type="button"><img src="/public/assets/images/arrow.svg" alt="Voltar para Lista de Profissionais Flestyle"></button>
       </aside>
@@ -66,12 +69,51 @@
             </div>
 
             <div class="one-input">
-              <label for="name">Biografia <small>(Maximo 300 caracteres)</small></label>
-              <textarea name="bio" maxlength="320"></textarea>
+              <label for="bio">Biografia <small>(Maximo 300 caracteres)</small></label>
+              <textarea id="bio" name="bio" maxlength="320"></textarea>
+            </div>
+
+            <div class="title service">
+              <h1>Sobre o serviço</h1>
+              <hr />
+            </div>
+
+            <div class="one-input">
+              <label for="select">Serviço</label>
+              <select id="select">
+                <option value="" hidden="">Selecione uma opção</option>
+                <option>Barbeiro</option>
+                <option>Manicure</option>
+                <option>Manicure e Cabeleireiro(a)</option>
+                <option>Cabeleireiro(a)</option>
+              </select>
+            </div>
+
+            <div class="one-input">
+              <label for="priceMin">Preços <small>(min / max | coloque com virgula)</small></label>
+              <input id="priceMin" type="number" placeholder="R$ minimo" />
+              <input id="priceMax" type="number" placeholder="R$ maximo" />
             </div>
           </form>
         </div>
       </div>
     </section>
+
+    <div class="modal-sucess">
+      <div class="container-modal">
+        <div class="content-modal">
+          <img src="/public/assets/images/sucess.svg" alt="Imagem cadastro finalizado" />
+          <h1>Cadastro salvo!</h1>
+          <p>
+            Tudo certo, seu cadastro está na nossa lista de Flestyles. <br />
+            Agora é só ficar de olho no seu WhatsApp.
+          </p>
+
+          <button type="button">Acessar lista</button>
+
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

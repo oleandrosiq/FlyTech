@@ -17,7 +17,7 @@ const Modals = {
     modal.style.display = "flex";
     sectionForm.style.display = "none";
   }
-  
+
 }
 
 const Form = {
@@ -28,7 +28,7 @@ const Form = {
     event.preventDefault();
 
     if (this.validateFields()) {  
-      console.log("Passei");
+      this.sendToBackEnd();
     } else {
       console.log("Não passei");
     }

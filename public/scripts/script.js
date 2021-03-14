@@ -1,6 +1,6 @@
 const App = {
   init() {
-    Rules.redirectWindow();
+    Rules.addEventClick();
   },
 
   reload() {
@@ -8,11 +8,8 @@ const App = {
   }
 }
 
-const DOM = {
-  display: document.querySelector("#displayAgent"),
-}
-
 const Modals = {
+
   openViewRegisterSucess() {
     const sectionForm = document.querySelector("#ladingForm");
     const modal = document.querySelector("#modalSucess");
@@ -20,6 +17,7 @@ const Modals = {
     modal.style.display = "flex";
     sectionForm.style.display = "none";
   }
+  
 }
 
 const Form = {
@@ -89,7 +87,7 @@ const Form = {
       console.log(result);
 
     } catch (error) {
-      
+      console.log(error);
     }
   },
 
@@ -278,55 +276,12 @@ const Form = {
 const Rules = {
   addEventClick() {
     const days = document.querySelectorAll("li");
-    const btnAcessList = document.querySelector("#btnAcessList");
-    const btnAcessDashboard = document.querySelector("#btnAcessDashboard");
-
-    if (window.location.pathname === "/public/views/home.html") {
-      const solicitService = document.querySelector("#solicitService");
-      const getInFlestyle = document.querySelector("#getInFlestyle");
-
-      solicitService.addEventListener('click', () => {
-        window.location.href = "agents.html";
-      });
-
-      getInFlestyle.addEventListener('click', () => {
-        window.location.href = "conta.html";
-      });
-    }
-
-    if (window.location.pathname === "/public/views/agents.html") {
-      const btnBackAgent = document.querySelector("#btnBackAgent");
-
-      btnBackAgent.addEventListener('click', () => {
-        window.location.href = "home.html";
-      });
-    }
-
-    if (window.location.pathname === "/public/views/form.html") {
-      const backFormHome = document.querySelector("#backFormHome");
-
-      backFormHome.addEventListener('click', () => {
-        window.location.href = "home.html";
-      });
-    }
 
     for (let day of days) {
       day.addEventListener('click', Form.getDaysActive);
     }
 
-    btnAcessList.addEventListener('click', () => {
-      window.location.href = "/public/views/agents.html";
-    });
-
-    btnAcessDashboard.addEventListener('click', () => {
-      window.location.href = "/public/views/conta.html";
-    });
-
   },
-
-  redirectWindow() {
-    this.addEventClick();
-  }
 }
-
+  
 App.init();

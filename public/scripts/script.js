@@ -29,8 +29,9 @@ const Form = {
 
     if (this.validateFields()) {  
       this.sendToBackEnd();
+      Modals.openViewRegisterSucess();
     } else {
-      console.log("Não passei");
+      console.log("Preencha todos os inputss");
     }
   },
 
@@ -74,26 +75,30 @@ const Form = {
      max_p: data.prices[1],
      min_p: data.prices[0],
      type: service,
-     number: data.profile[4],
+     number: String(data.profile[4]),
      disp: `${data.times[1]}, ${data.times[0]}, ${weekday}`
     }
-
+    
     try {
       const result = await fetch("http://localhost:3000/create", {
         method: "POST",
         body: JSON.stringify(user)
       });
 
-      console.log(result);
-
     } catch (error) {
       console.log(error);
     }
   },
 
+  async getAgent() {
+    const users = await fetch("http://localhost:3000/users").then(console.log());
+    
+  },
+
   getValuesDashboard() {
     const dashboard = document.querySelector("#dashboard");
-
+  
+    console.log(dashboard);
   },
 
   validateFields() {

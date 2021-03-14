@@ -7,12 +7,13 @@
   
     <title>Login | Flestyle</title>
     
-    <link href="/public/css/conta.css" rel="stylesheet" />
+    <link href="/public/css/styles/conta.css" rel="stylesheet" />
+    <link href="/public/css/responsive/conta.responsive.css" rel="stylesheet" />
   </head>
   <body>
     
     <section class="login">
-      <div class="container-login">
+      <div id="login" class="container-login">
         <div class="box-img"></div>
       
         <div class="box-input">
@@ -31,6 +32,7 @@
               <label for="senhaLogin">Senha</label>
               <input id="loginSenha" type="password" />
             </div>
+            <a href="form.html">Não tem uma conta ?</a>
 
             <button type="button">Entrar</button>
           </div>
@@ -38,7 +40,7 @@
         </div>
       </div>
 
-      <div class="container-dashboard">
+      <div id="dashboard" class="container-dashboard">
         <div class="title-dashboard">
           <h1>Bem-vindo ao dashboard de seu perfil!</h1>
           <p>Aqui você pode alterar suas informações</p>
@@ -151,7 +153,7 @@
         </div>
 
         <div class="footer">
-          <button type="button">Salvar Alteração</button>
+          <button onclick="Form.getValuesDashboard()" type="button">Salvar Alteração</button>
         </div>
       </div>
     </section>

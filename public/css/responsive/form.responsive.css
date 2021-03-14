@@ -1,0 +1,306 @@
+@media (max-width: 1100px) {
+  section.landing-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.landing-form aside {
+    width: 100%;
+    height: 100px;
+    position: initial;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.landing-form aside div.logo img {
+    width: 80px;
+  }
+  section.landing-form aside button {
+    width: 46px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--color-pink);
+    background: var(--color-red);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+  }
+  section.landing-form aside button:hover {
+    opacity: .6;
+    -webkit-box-shadow: 0 0 5px #fff;
+            box-shadow: 0 0 5px #fff;
+  }
+  section.landing-form div.section-form {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 940px) {
+  section.landing-form div.section-form {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  section.landing-form div.section-form div.title-form {
+    height: 300px;
+    background: var(--color-red);
+  }
+  section.landing-form div.section-form div.title-form div.content-title {
+    max-width: 800px;
+    height: 100%;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.landing-form div.section-form div.title-form div.content-title div.title h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  section.landing-form div.section-form div.title-form div.content-title div.title p {
+    padding-top: 20px;
+    padding: 20px 0;
+    font-size: 17px;
+    opacity: .7;
+    text-align: center;
+  }
+  section.landing-form div.section-form div.title-form div.content-title div.cont-agents {
+    max-width: 300px;
+    height: 50px;
+    border: 1px solid lightgreen;
+    -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+  }
+  section.landing-form div.section-form div.title-form div.content-title div.cont-agents p {
+    font-size: 14px;
+    padding-left: 15px;
+  }
+  section.landing-form div.section-form div.title-form div.content-title div.cont-agents:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  section.landing-form div.section-form div.box-form {
+    width: 90%;
+  }
+  section.landing-form div.section-form div.box-form form div.one-input {
+    margin-top: 20px;
+  }
+  section.landing-form div.section-form div.box-form form label {
+    font-size: 18px;
+    color: var(--color-text-form);
+    display: block;
+    padding-bottom: 8px;
+  }
+  section.landing-form div.section-form div.box-form form input {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid var(--color-text-form);
+    background: var(--background-input);
+    padding-left: 8px;
+    font-size: 19px;
+    color: var(--color-red);
+  }
+  section.landing-form div.section-form div.box-form form input#priceMax {
+    margin-top: 13px;
+  }
+  section.landing-form div.section-form div.box-form form textarea {
+    width: 100%;
+    height: 160px;
+    border: 1px solid var(--color-text-form);
+    border-radius: 10px;
+    background: var(--background-input);
+    padding: 10px;
+    font-size: 19px;
+    color: var(--color-red);
+    resize: none;
+  }
+  section.landing-form div.section-form div.box-form form small {
+    padding-left: 10px;
+  }
+  section.landing-form div.section-form div.box-form form select {
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--color-text-form);
+    border-radius: 10px;
+    background: var(--background-input);
+    padding-left: 8px;
+    font-size: 19px;
+    color: var(--color-red);
+    cursor: pointer;
+  }
+  section.landing-form div.section-form div.box-form form div.two-input {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.landing-form div.section-form div.box-form form div.two-input div.box-input {
+    width: 100%;
+    margin-top: 15px;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays {
+    width: 100%;
+    margin-top: 20px;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays p {
+    color: var(--color-text-form);
+    line-height: 23px;
+    padding: 10px 0;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-check {
+    width: 100%;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-check ul {
+    list-style: none;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-check ul li {
+    width: 10px;
+    height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-check ul li input {
+    width: initial;
+    height: 50px;
+    cursor: pointer;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-check ul li label {
+    padding-left: 8px;
+    color: var(--color-text-form);
+    cursor: pointer;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-time {
+    width: 100%;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-time p {
+    font-size: 15px;
+    padding-left: 25px;
+    color: var(--color-red);
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-time div.time-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    gap: 20px;
+    padding-right: 50px;
+  }
+  section.landing-form div.section-form div.box-form form div.weekdays div.container-weekdays div.box-time div.time-container input {
+    width: 60px;
+  }
+  section.landing-form div.section-form div.box-form form div.footer {
+    width: 100%;
+    height: 150px;
+    background: var(--background-input);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.landing-form div.section-form div.box-form form div.footer div.info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.landing-form div.section-form div.box-form form div.footer div.info p {
+    padding-left: 10px;
+    color: var(--color-red);
+  }
+}
+
+@media (max-width: 600px) {
+  div.section-form div.box-form {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=form.responsive.css.map */

@@ -1,0 +1,295 @@
+@import 'base';
+
+body {
+  background: var(--background-white);
+}
+
+section.landing-agents {
+  width: 100%;
+
+  aside {
+    width: 100px;
+    height: 100vh;
+  
+    background: var(--background-base);
+    padding: 10px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    
+    div.logo {
+      img {
+        width: 80px;
+      }
+    }
+  
+    button {
+      width: 46px;
+      height: 40px;
+  
+      border-radius: 5px;
+      border: 1px solid var(--color-pink);
+      background: var(--color-red);
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      transition: .2s;
+      cursor: pointer;
+  
+      &:hover {
+        opacity: .6;
+        box-shadow: 0 0 5px #fff;
+      }
+    }
+  }
+
+  div.section-agents {
+    width: 100%;
+    height: 600px;
+
+    div.title-agents { 
+      height: 180px;
+      background: var(--color-red);
+      
+      div.content-title {
+        max-width: 800px;
+        height: 100%;
+
+        margin: 0 auto;
+        color: #fff;
+
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        
+        h1 {
+          font-size: 30px;
+        }
+  
+        div.cont-agents {
+          max-width: 300px;
+          height: 50px;
+  
+          border: 1px solid lightgreen;
+          box-shadow: 0 0 10px #fff;
+          padding: 10px;
+
+          display: flex;
+          align-items: center;
+
+          transition: .2s;
+          cursor: pointer;
+
+          p {
+            font-size: 14px;
+            padding-left: 15px;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+        }
+      }
+    }
+
+    div.container-agents {
+      max-width: 800px;
+
+      margin: 10px auto;
+      padding: 30px 0 80px 0;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      
+      div.agent {
+        max-width: 730px;
+        height: 500px;
+
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        background: #fff;
+
+        position: relative;
+
+        div.profile {
+          width: 300px;
+          height: 70px;
+
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+
+          img {
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50px;
+            
+            cursor: pointer;
+          }
+
+          div.name-ocupation {
+            padding-left: 10px;
+            
+            h1 {
+              color: var(--color-shape);
+            }
+
+            p {
+              color: var(--color-shape-hover);
+            }
+          }
+        }
+
+        div.bio {
+          p {
+            max-width: 700px;
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--color-shape);
+  
+            padding: 20px;
+            text-align: justify;
+          }
+        }
+
+        div.day-hour {
+          width: 100%;
+
+          padding: 10px;
+
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 10px;
+
+          div.content-day-hours {
+            background: var(--background-white);
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            padding: 10px;
+
+            span.day {
+              color: var(--color-day);
+              padding-bottom: 15px;
+
+              h1 {
+                padding-top: 5px;
+                font-size: 20px;
+              }
+            }
+
+            span.hours {
+              color: var(--color-day);
+
+              h1 {
+                padding-top: 5px;
+                font-size: 20px;
+              }
+            }
+          }
+
+          div.content-day-hours.notActive {
+            opacity: .4;
+          }
+        }
+
+        div.footer {
+          width: 100%;
+          height: 100px;
+
+          background: rgb(248, 245, 245);
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+
+          padding: 20px;
+
+          position: absolute;
+          bottom: 0;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          div.price {
+
+            h1 {
+              padding-bottom: 8px;
+            }
+
+            div.values {
+              width: 200px;
+
+              // border: 1px solid var(--color-red);
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+
+              p {
+                font-size: 15px;
+                font-weight: bold;
+                color: var(--color-day);
+
+                span {
+                  color: var(--color-red);
+                }
+
+              }
+
+
+            }
+
+          }
+
+          a.button {
+            padding: 10px;
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--color-day);
+            
+            background: var(--color-green-light);
+            border: 1px solid var(--color-green);
+            border-radius: 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: .2s;
+            cursor: pointer;
+
+            img {
+              padding-right: 8px;
+            }
+
+            &:hover {
+              opacity: .8;
+            }
+
+          }
+
+        }
+      }
+    }
+  }
+}

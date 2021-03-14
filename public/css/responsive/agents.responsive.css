@@ -1,0 +1,230 @@
+@media (max-width: 1080px) {
+  section.landing-agents {
+    width: 100%;
+  }
+  section.landing-agents aside {
+    width: 100%;
+    height: 100px;
+    background: var(--background-base);
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: initial;
+  }
+}
+
+@media (max-width: 860px) {
+  section.landing-agents div.section-agents {
+    width: 100%;
+  }
+  section.landing-agents div.section-agents div.title-agents {
+    height: 180px;
+  }
+  section.landing-agents div.section-agents div.title-agents div.content-title {
+    width: 90%;
+  }
+  section.landing-agents div.section-agents div.container-agents {
+    width: 90%;
+    margin: 10px auto;
+    padding: 30px 0 80px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 70px;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  section.landing-agents div.section-agents div.title-agents div.content-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.landing-agents div.section-agents div.title-agents div.content-title h1 {
+    font-size: 24px;
+  }
+  section.landing-agents div.section-agents div.title-agents div.content-title div.cont-agents {
+    max-width: 300px;
+    height: 50px;
+    border: 1px solid lightgreen;
+    -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+  }
+  section.landing-agents div.section-agents div.title-agents div.content-title div.cont-agents p {
+    font-size: 14px;
+    padding-left: 15px;
+  }
+  section.landing-agents div.section-agents div.title-agents div.content-title div.cont-agents:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent {
+    height: auto;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding-bottom: 190px;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours {
+    background: var(--background-white);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.day {
+    color: var(--color-day);
+    padding-bottom: 15px;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.day h1 {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.hours {
+    color: var(--color-day);
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours span.hours h1 {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.day-hour div.content-day-hours.notActive {
+    opacity: .4;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.footer {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.footer div.price div.values {
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.footer div.price div.values p {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-day);
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.footer div.price div.values p span {
+    color: var(--color-red);
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.footer a.button {
+    padding: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-day);
+    background: var(--color-green-light);
+    border: 1px solid var(--color-green);
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.footer a.button img {
+    padding-right: 8px;
+  }
+  section.landing-agents div.section-agents div.container-agents div.agent div.footer a.button:hover {
+    opacity: .8;
+  }
+}
+/*# sourceMappingURL=agents.responsive.css.map */

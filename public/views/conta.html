@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Login | Flestyle</title>
+    
+    <link href="../css/styles/conta.css" rel="stylesheet" />
+    <link href="../css/responsive/conta.responsive.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <button id="backHomeConta" type="button">Voltar para home</button>
+    
+    <section class="login">
+      <div id="login" class="container-login">
+        <div class="box-img"></div>
+      
+        <div class="box-input">
+          <div>
+            <h1>Olá, Seja Bem-vindo!</h1>
+            <p>Faça seu login, para conseguir alterar seu perfil!</p>
+          </div>
+          
+          <div class="group-inputs">
+            <div>
+              <label for="emailLogin">Email</label>
+              <input id="loginEmail" type="email" />
+            </div>
+
+            <div>
+              <label for="senhaLogin">Senha</label>
+              <input id="loginSenha" type="password" />
+            </div>
+            <a href="form.html">Não tem uma conta ?</a>
+
+            <button type="button">Entrar</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="dashboard" class="container-dashboard">
+        <div class="title-dashboard">
+          <h1>Bem-vindo ao dashboard de seu perfil!</h1>
+          <p>Aqui você pode alterar suas informações</p>
+        </div>
+
+        <div class="top-dashboard">
+          <div class="img"></div>
+
+          <div class="input-img">
+            <label for="linkImgDashboard">Link da sua foto:</label>
+            <input id="linkImgDashboard" placeholder="Comece com https://" type="text" />
+          </div>
+        </div>
+
+        <div class="group-inputs-dashboard">
+          <div class="two-input">
+            <div class="box-input-dashboard">
+              <label for="nameDashboard">Nome completo</label>
+              <input id="nameDashboard" type="text" />
+            </div>
+
+            <div class="box-input-dashboard">
+              <label for="numberDashboard">Whatsapp</label>
+              <input id="numberDashboard" type="number" />
+            </div>
+          </div>
+
+          <div class="bio">
+            <label for="bioDashboard">Biografia (Maximo 300 caracteres)</label>
+            <textarea id="bioDashboard" maxlength="300"></textarea>
+          </div>
+
+          <div class="info-service">
+            <div class="select">
+              <label for="selectDashboard">Serviço</label>
+              <select id="selectDashboard">
+                <option value="" hidden="">Selecione uma opção</option>
+                <option>Barbeiro</option>
+                <option>Manicure</option>
+                <option>Manicure e Cabeleireiro(a)</option>
+                <option>Cabeleireiro(a)</option>
+              </select>
+            </div>
+
+            <div class="prices">
+              <label>Preços (min / max | coloque com virgula)</label>
+            
+              <input type="number" placeholder="R$ minimo" />
+              <input type="number" placeholder="R$ maximo" />
+            </div>
+
+          </div>
+
+          <div class="weekdays">
+            <p>Selecione o dia e marque o horario (apenas dos dias disponiveis!)</p>
+
+            <div class="container-weekdays">
+              <div class="box-check">
+                <ul id="days"> 
+                  <li>
+                    <input name="segunda" type="checkbox" id="segunda" />
+                    <label for="segunda">Segunda</label>
+                  </li>
+
+                  <li>
+                    <input name="terca" type="checkbox" id="terca" />
+                    <label for="terca">Terça</label>
+                  </li>
+
+                  <li>
+                    <input name="quarta" type="checkbox" id="quarta" />
+                    <label for="quarta">Quarta</label>
+                  </li>
+
+                  <li>
+                    <input name="quinta" type="checkbox" id="quinta" />
+                    <label for="quinta">Quinta</label>
+                  </li>
+
+                  <li>
+                    <input name="sexta" type="checkbox" id="sexta" />
+                    <label for="sexta">Sexta</label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="box-time">
+                <p>
+                  Marque um horario que seja acessivel para 
+                  todos os seus dias disponiveis.
+                </p>
+
+                <div class="time-container">
+                  <div class="time">
+                    <label>Até</label>
+                    <input type="time" />
+                  </div>
+
+                  <div class="time">
+                    <label>Das</label>
+                    <input type="time" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <button onclick="Form.getValuesDashboard()" type="button">Salvar Alteração</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/conta.js"></script>
+  </body>
+</html>

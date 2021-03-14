@@ -9,7 +9,6 @@ const App = {
 }
 
 const Modals = {
-
   openViewRegisterSucess() {
     const sectionForm = document.querySelector("#ladingForm");
     const modal = document.querySelector("#modalSucess");
@@ -17,12 +16,9 @@ const Modals = {
     modal.style.display = "flex";
     sectionForm.style.display = "none";
   }
-
 }
 
 const Form = {
-
-  stateForm: false,
 
   stopSubmit(event) {
     event.preventDefault();
@@ -30,6 +26,7 @@ const Form = {
     if (this.validateFields()) {  
       this.sendToBackEnd();
       Modals.openViewRegisterSucess();
+      
     } else {
       console.log("Preencha todos os inputss");
     }
@@ -66,22 +63,25 @@ const Form = {
         service = 3;
     }
 
-   const user = { 
-     name: data.profile[0], 
-     email: data.profile[1], 
-     pass: data.profile[2], 
-     bio: data.bio,
-     image: data.profile[3],
-     max_p: data.prices[1],
-     min_p: data.prices[0],
-     type: service,
-     number: String(data.profile[4]),
-     disp: `${data.times[1]}, ${data.times[0]}, ${weekday}`
+    const user = {
+      name: data.profile[0], 
+      email: data.profile[1], 
+      pass: data.profile[2], 
+      bio: data.bio,
+      image: data.profile[3],
+      max_p: parseFloat(data.prices[1]),
+      min_p: parseFloat(data.prices[0]),
+      type: service,
+      number: `${data.profile[4]}`,
+      disp: `${data.times[1]}, ${data.times[0]}, ${weekday}`
     }
     
     try {
       const result = await fetch("http://localhost:3000/create", {
         method: "POST",
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
         body: JSON.stringify(user)
       });
 
@@ -90,14 +90,9 @@ const Form = {
     }
   },
 
-  async getAgent() {
-    const users = await fetch("http://localhost:3000/users").then(console.log());
-    
-  },
-
   getValuesDashboard() {
     const dashboard = document.querySelector("#dashboard");
-  
+    
     console.log(dashboard);
   },
 
@@ -166,12 +161,7 @@ const Form = {
 
   getDaysActive(element) {
     element.target.classList.toggle("active");
-    // enviar os dias ativos para o backEnd
   },
-
-  // pegar os dados do back end
-  // nameUser, photoUser, whatsUser, bio, selectService,
-  // priceMin, priceMax, timeAte, timeDas, days
 
   createHTMLAgent() {
 
@@ -273,8 +263,6 @@ const Form = {
       </div>
     </div>
     `
-      // Lembrar de integrar o whatsApp o link
-      
   }
 }
 

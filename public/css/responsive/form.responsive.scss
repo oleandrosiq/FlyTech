@@ -1,0 +1,304 @@
+@media (max-width: 1100px) {
+
+  section.landing-form {
+    display: flex;
+    flex-direction: column;
+  
+    aside {
+      width: 100%;
+      height: 100px;
+
+      position: initial;
+      padding: 20px;
+      
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+
+      div.logo {
+        img {
+          width: 80px;
+        }
+      }
+  
+      button {
+        width: 46px;
+        height: 40px;
+  
+        border-radius: 5px;
+        border: 1px solid var(--color-pink);
+        background: var(--color-red);
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        transition: .2s;
+        cursor: pointer;
+  
+        &:hover {
+          opacity: .6;
+          box-shadow: 0 0 5px #fff;
+        }
+      }
+    }
+  
+    div.section-form {
+      width: 100%;
+      padding-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+
+  section.landing-form {
+    div.section-form {
+      width: 100%;
+      padding-bottom: 100px;
+      
+      div.title-form { 
+        height: 300px;
+        background: var(--color-red);
+        
+        div.content-title {
+          max-width: 800px;
+          height: 100%;
+          padding: 10px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          div.title {
+            h1 {
+              font-size: 20px;
+              text-align: center;
+            }
+    
+            p {
+              padding-top: 20px;
+              padding: 20px 0;
+              font-size: 17px;
+              opacity: .7;
+              text-align: center;
+            }
+          }
+  
+          div.cont-agents {
+            max-width: 300px;
+            height: 50px;
+  
+            border: 1px solid lightgreen;
+            box-shadow: 0 0 10px #fff;
+            padding: 10px;
+  
+            display: flex;
+            align-items: center;
+  
+            transition: .2s;
+            cursor: pointer;
+  
+            p {
+              font-size: 14px;
+              padding-left: 15px;
+            }
+  
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+  
+      div.box-form {
+        width: 90%;
+        form {
+          div.one-input {
+            margin-top: 20px;
+          }
+  
+          label {
+            font-size: 18px;
+            color: var(--color-text-form);
+            display: block;
+            padding-bottom: 8px;
+          }
+  
+          input {
+            width: 100%;
+            height: 45px;
+  
+            border-radius: 10px;
+            border: 1px solid var(--color-text-form);
+            background: var(--background-input);
+  
+            padding-left: 8px;
+            font-size: 19px;
+            color: var(--color-red);
+          } 
+          
+          input#priceMax {
+            margin-top: 13px;
+          }
+  
+          textarea {
+            width: 100%;
+            height: 160px;
+            // verificar a altura de quando estiver no mobile
+  
+            border: 1px solid var(--color-text-form);
+            border-radius: 10px;
+            background: var(--background-input);
+            padding: 10px;
+  
+            font-size: 19px;
+            color: var(--color-red);
+            resize: none;
+          }
+  
+          small {
+            padding-left: 10px;
+          }
+  
+          select {
+            width: 100%;
+            height: 45px;
+  
+            border: 1px solid var(--color-text-form);
+            border-radius: 10px;
+            background: var(--background-input);
+  
+            padding-left: 8px;
+  
+            font-size: 19px;
+            color: var(--color-red);
+  
+            cursor: pointer;
+          }
+  
+          div.two-input {
+            width: 100%;
+  
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            div.box-input {
+              width: 100%;
+              margin-top: 15px;
+            }
+          }
+  
+          div.weekdays {
+            width: 100%;
+            margin-top: 20px;
+  
+            p {
+              color: var(--color-text-form);
+              line-height: 23px;
+              padding: 10px 0;
+            }
+  
+            div.container-weekdays {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+  
+              div.box-check {
+                width: 100%;
+
+                ul {
+                  list-style: none;
+
+                  li {
+                    width: 10px;
+                    height: 20px;
+  
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+  
+                    input {
+                      width: initial;
+                      height: 50px;
+                      cursor: pointer;
+                    }
+  
+                    label {
+                      padding-left: 8px;
+                      color: var(--color-text-form);
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+  
+              div.box-time {
+                width: 100%;
+  
+                p {
+                  font-size: 15px;
+                  padding-left: 25px;
+                  color: var(--color-red);
+                }
+  
+                div.time-container {
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  flex-direction: row-reverse;
+                  flex-wrap: wrap-reverse;
+                  gap: 20px;
+  
+                  padding-right: 50px;
+  
+                  input {
+                    width: 60px;
+                  }
+                }
+              }
+            }
+          }  
+  
+          div.footer {
+            width: 100%;
+            height: 150px;
+            
+            background: var(--background-input);
+  
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 20px;
+  
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+  
+            div.info {
+              display: flex;
+              align-items: center;
+  
+              p {
+                padding-left: 10px;
+                color: var(--color-red);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  div.section-form {
+    div.box-form {
+      width: 100%;
+    }
+  }
+}

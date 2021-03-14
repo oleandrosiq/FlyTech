@@ -259,8 +259,10 @@ section.landing-agents {
 
           }
 
-          button {
+          a.button {
             padding: 10px;
+
+            text-decoration: none;
 
             font-size: 15px;
             font-weight: bold;

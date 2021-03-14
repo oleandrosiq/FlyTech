@@ -18,7 +18,7 @@
       <div class="logo">
         <img src="/public/assets/images/logo1.png" alt="Logo">
       </div>  
-        <button type="button"><img src="/public/assets/images/arrow.svg" alt="Voltar para Home"></button>
+        <button id="btnBackAgent" type="button"><img src="/public/assets/images/arrow.svg" alt="Voltar para Home"></button>
       </aside>
 
       <div class="section-agents">
@@ -37,7 +37,7 @@
 
         </div>
 
-        <div class="container-agents">
+        <div id="displayAgent" class="container-agents">
           
           <div class="agent">
             <div class="profile">
@@ -131,15 +131,17 @@
 
               </div>
 
-              <button type="button">
-                <img src="/public/assets/images/Vector.svg" alt="Entrar em contato via WhatsApp">
-                Entrar em contato
-              </button>
+              <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5519999669175&text=Tenho interesse em seu serviço de Cabeleireiro Leandro Siqueira" class="button" target="_blank">
+                <img src="/public/assets/images/Vector.svg" alt="Whatsapp">Entrar em contato
+              </a>
+
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
+
+    <script src="/public/scripts/script.js"></script>
   </body>
 </html>

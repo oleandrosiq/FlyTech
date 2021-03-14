@@ -10,16 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
     <link href="/public/css/form.css" rel="stylesheet">
+    <link href="/public/css/responsive/form.responsive.css" rel="stylesheet">
   </head>
   <body>
 
-    <section class="landing-form">
+    <section id="ladingForm" class="landing-form">
       <aside>
         <div class="logo">
           <img src="/public/assets/images/logo1.png" alt="Logo" />
         </div>
   
-        <button type="button"><img src="/public/assets/images/arrow.svg" alt="Voltar para Lista de Profissionais Flestyle"></button>
+        <button id="backFormHome" title="Voltar para home" type="button"><img src="/public/assets/images/arrow.svg" alt="Voltar para home Flestyle"></button>
       </aside>
 
       <div class="section-form">
@@ -43,22 +44,24 @@
           </div>
         </div>
 
+        <div id="teste"></div>
+
         <div class="box-form">
-          <form id="form" accept="">
+          <form id="form" action="agents.html" onsubmit="Form.stopSubmit(event)">
             <div class="title">
               <h1>Seus dados</h1>
               <hr />
             </div>
 
             <div class="one-input">
-              <label for="name">Nome completo</label>
-              <input id="name" type="text" />
+              <label for="nameUser">Nome completo</label>
+              <input id="nameUser" type="text"  />
             </div>
 
             <div class="two-input">
               <div class="box-input">
                 <label for="email">Email</label>
-                <input id="email" type="email" />
+                <input id="email" type="email"  />
               </div>
 
               <div class="box-input">
@@ -70,18 +73,18 @@
             <div class="two-input">
               <div class="box-input">
                 <label for="photo">Link da sua foto <small>(comece com https://)</small></label>
-                <input id="photo" type="text" />
+                <input id="photo" type="text"  />
               </div>
 
               <div class="box-input">
                 <label for="whats">Whatsapp <small>(Apenas numeros)</small></label>
-                <input id="whats" type="number" />
+                <input oninput="Form.validateNumber()" id="whats" type="number" />
               </div>
             </div>
 
             <div class="one-input">
               <label for="bio">Biografia <small>(Maximo 300 caracteres)</small></label>
-              <textarea id="bio" name="bio" maxlength="320"></textarea>
+              <textarea  id="bio" name="bio" maxlength="320"></textarea>
             </div>
 
             <div class="title service">
@@ -91,7 +94,7 @@
 
             <div class="one-input">
               <label for="select">Serviço</label>
-              <select id="select">
+              <select id="select" >
                 <option value="" hidden="">Selecione uma opção</option>
                 <option>Barbeiro</option>
                 <option>Manicure</option>
@@ -102,58 +105,54 @@
 
             <div class="one-input">
               <label for="priceMin">Preços <small>(min / max | coloque com virgula)</small></label>
-              <input id="priceMin" type="number" placeholder="R$ minimo" />
-              <input id="priceMax" type="number" placeholder="R$ maximo" />
+              <input  id="priceMin" type="number" placeholder="R$ minimo" />
+              <input  id="priceMax" type="number" placeholder="R$ maximo" />
             </div>
 
             <div class="weekdays">
-              <p>Selecione o dia e marque o horario (apenas dos dias disponiveis!)</p>
+              <p>Selecione o dia e marque o horario (Horario que você esteja disponivel nos dias.)</p>
 
               <div class="container-weekdays">
                 <div class="box-check">
                   <ul id="days"> 
                     <li>
-                      <input name="segunda" type="checkbox" id="segunda" />
+                      <input class="segunda" name="segunda" type="checkbox" id="segunda" />
                       <label for="segunda">Segunda</label>
                     </li>
 
                     <li>
-                      <input name="terca" type="checkbox" id="terca" />
+                      <input class="terca" name="terca" type="checkbox" id="terca" />
                       <label for="terca">Terça</label>
                     </li>
 
                     <li>
-                      <input name="quarta" type="checkbox" id="quarta" />
+                      <input class="quarta" name="quarta" type="checkbox" id="quarta" />
                       <label for="quarta">Quarta</label>
                     </li>
 
                     <li>
-                      <input name="quinta" type="checkbox" id="quinta" />
+                      <input class="quinta" name="quinta" type="checkbox" id="quinta" />
                       <label for="quinta">Quinta</label>
                     </li>
 
                     <li>
-                      <input name="sexta" type="checkbox" id="sexta" />
+                      <input class="sexta" name="sexta" type="checkbox" id="sexta" />
                       <label for="sexta">Sexta</label>
                     </li>
                   </ul>
                 </div>
 
                 <div class="box-time">
-                  <p>
-                    Marque um horario que seja acessivel para 
-                    todos os seus dias disponiveis.
-                  </p>
 
                   <div class="time-container">
                     <div class="time">
                       <label>Até</label>
-                      <input type="time" />
+                      <input  id="timeAte" type="time" />
                     </div>
 
                     <div class="time">
                       <label>Das</label>
-                      <input type="time" />
+                      <input  id="timeDas" type="time" />
                     </div>
                   </div>
 
@@ -168,15 +167,15 @@
                   Preencha todos os dados</p>
               </div>
 
-              <button type="submit">Salvar cadastro</button>
+              <button id="submitForm" type="submit">Salvar cadastro</button>
             </div>
-
           </form>
         </div>
+
       </div>
     </section>
 
-    <div class="modal-sucess">
+    <div id="modalSucess" class="modal-sucess">
       <div class="container-modal">
         <div class="content-modal">
           <img src="/public/assets/images/sucess.svg" alt="Imagem cadastro finalizado" />
@@ -186,11 +185,14 @@
             Agora é só ficar de olho no seu WhatsApp.
           </p>
 
-          <button type="button">Acessar lista</button>
-
+          <div class="box-buttons">
+            <button id="btnAcessList" type="button">Acessar lista</button>
+            <button id="btnAcessDashboard" type="button">Acessar Dashboard</button>
+          </div>
         </div>
       </div>
     </div>
 
+    <script src="/public/scripts/script.js"></script>
   </body>
 </html>

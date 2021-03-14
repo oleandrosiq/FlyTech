@@ -320,8 +320,9 @@ section.landing-agents div.section-agents div.container-agents div.agent div.foo
   color: var(--color-red);
 }
 
-section.landing-agents div.section-agents div.container-agents div.agent div.footer button {
+section.landing-agents div.section-agents div.container-agents div.agent div.footer a.button {
   padding: 10px;
+  text-decoration: none;
   font-size: 15px;
   font-weight: bold;
   color: var(--color-day);
@@ -342,11 +343,11 @@ section.landing-agents div.section-agents div.container-agents div.agent div.foo
   cursor: pointer;
 }
 
-section.landing-agents div.section-agents div.container-agents div.agent div.footer button img {
+section.landing-agents div.section-agents div.container-agents div.agent div.footer a.button img {
   padding-right: 8px;
 }
 
-section.landing-agents div.section-agents div.container-agents div.agent div.footer button:hover {
+section.landing-agents div.section-agents div.container-agents div.agent div.footer a.button:hover {
   opacity: .8;
 }
 /*# sourceMappingURL=agents.css.map */

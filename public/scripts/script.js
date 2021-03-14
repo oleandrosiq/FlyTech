@@ -1,4 +1,5 @@
 const displayAgent = document.querySelector("#displayAgent");
+const agentsCont = document.querySelector("#agentsCont");
 
 const App = {
   init() {
@@ -209,7 +210,9 @@ const Form = {
         "type": 4,
         "created": "2021-03-14T20:16:54.303Z"
       }
-    ]
+    ];
+
+    agentsCont.innerHTML = arrayTeste.length;
 
     return arrayTeste;
   },

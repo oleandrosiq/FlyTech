@@ -30,7 +30,7 @@
 
 ### Execute a aplicação
 - "yarn start"
-- ou "npm run-script build"
+- ou "npm run-script build" e depois "npm run-script start"
 
 ### Acesse a aplicação:
 <a href="http://localhost:3000">Aqui</a>

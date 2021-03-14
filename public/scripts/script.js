@@ -1,6 +1,9 @@
+const displayAgent = document.querySelector("#displayAgent");
+
 const App = {
   init() {
     Rules.addEventClick();
+    Form.getAgents();
   },
 
   reload() {
@@ -163,7 +166,83 @@ const Form = {
     element.target.classList.toggle("active");
   },
 
-  createHTMLAgent() {
+  getAgents() {
+    const array = this.getUsers();
+
+    array.forEach((element) => {
+      timeBef = element.disp.split(',')[0];
+      timeAft = element.disp.split(',')[1];
+      
+      this.createHTMLAgent(element.name, element.image, element.type, element.number, element.bio,
+        timeBef, timeAft, element.disp, element.min_p, element.max_p);
+
+    });
+  },
+
+  getUsers() {
+    const arrayTeste = [
+      {
+        "id": 0,
+        "name": "Luís Henrique",
+        "email": "",
+        "pass": "",
+        "number": "1199999999",
+        "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.5WpGDTCnw4WX1n4C1-y6lAHaFj%26pid%3DApi&f=1",
+        "bio": "Me chamo luis e sou um pato",
+        "disp": "12:00, 15:00, 1,1,0,1,0",
+        "min_p": 25,
+        "max_p": 100,
+        "type": 4,
+        "created": "2021-03-14T20:14:53.837Z"
+      },
+      {
+        "id": 0,
+        "name": "Leandro Henrique",
+        "email": "",
+        "pass": "",
+        "number": "11992929929",
+        "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.gXG622b-JKKei-tPYfT-cgHaFj%26pid%3DApi&f=1",
+        "bio": "Me chamo Leando e sou uma girafa",
+        "disp": "12:00, 18:00, 0,0,1,1,1",
+        "min_p": 30,
+        "max_p": 120,
+        "type": 4,
+        "created": "2021-03-14T20:16:54.303Z"
+      }
+    ]
+
+    return arrayTeste;
+  },
+
+  createHTMLAgent(
+    nameUser, 
+    photoUser, 
+    selectService, 
+    numberUser, 
+    bio, 
+    timeDas, 
+    timeAte, 
+    days, 
+    priceMin, 
+    priceMax) {
+
+      switch (selectService) {
+        case selectService = 1:
+          selectService = "Barbeiro"
+        break;
+        case selectService = 2:
+          selectService = "Manicure"
+        break;
+        case selectService = 3:
+          selectService = "Manicure e Cabeleireiro(a)"
+        break;
+        case selectService = 4:
+          selectService = "Cabeleireiro(a)"
+        break;
+        
+      }
+
+      console.log(days[4]);
 
     const HTML = `
       <div class="agent">
@@ -185,7 +264,7 @@ const Form = {
       </div>
 
       <div class="day-hour">
-        <div class="content-day-hours notActive">
+        <div class="content-day-hours ${( days[2] === '0' ? "notActive" : "" )}">
           <span class="day">
             Dia <br /> 
             <h1>Segunda</h1>
@@ -198,7 +277,7 @@ const Form = {
 
         </div>
 
-        <div class="content-day-hours ">
+        <div class="content-day-hours ${( days[3] === '0' ? "notActive" : "" )}">
           <span class="day">
             Dia <br /> 
             <h1>Terça</h1>
@@ -210,7 +289,7 @@ const Form = {
           </span>
         </div>
 
-        <div class="content-day-hours ">
+        <div class="content-day-hours ${( days[4] === '0' ? "notActive" : "" )}">
           <span class="day">
             Dia <br /> 
             <h1>Quarta</h1>
@@ -222,7 +301,7 @@ const Form = {
           </span>
         </div>
 
-        <div class="content-day-hours notActive">
+        <div class="content-day-hours ${( days[5] === '0' ? "notActive" : "" )}">
           <span class="day">
             Dia <br /> 
             <h1>Quinta</h1>
@@ -234,7 +313,7 @@ const Form = {
           </span>
         </div>
 
-        <div class="content-day-hours ">
+        <div class="content-day-hours ${( days[6] === '0' ? "notActive" : "" )}">
           <span class="day">
             Dia <br /> 
             <h1>Sexta</h1>
@@ -257,12 +336,14 @@ const Form = {
           </div>
         </div>
 
-        <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5519999669175&text=Tenho interesse em seu serviço de Cabeleireiro Leandro Siqueira" class="button" target="_blank">
-          <img src="/public/assets/images/Vector.svg" alt="Whatsapp">Entrar em contato
+        <a href="https://api.whatsapp.com/send?l=pt_BR&phone=${numberUser}&text=Tenho interesse em seu serviço de ${selectService} ${nameUser}" class="button" target="_blank">
+          <img src="../assets/images/Vector.svg" alt="Whatsapp">Entrar em contato
         </a>
       </div>
     </div>
     `
+    displayAgent.innerHTML += HTML;
+
   }
 }
 

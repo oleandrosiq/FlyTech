@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-    <link href="/public/css/form.css" rel="stylesheet">
+    <link href="/public/css//styles/form.css" rel="stylesheet">
     <link href="/public/css/responsive/form.responsive.css" rel="stylesheet">
   </head>
   <body>
@@ -47,7 +47,7 @@
         <div id="teste"></div>
 
         <div class="box-form">
-          <form id="form" action="agents.html" onsubmit="Form.stopSubmit(event)">
+          <form id="form" onsubmit="Form.stopSubmit(event)">
             <div class="title">
               <h1>Seus dados</h1>
               <hr />
@@ -78,7 +78,7 @@
 
               <div class="box-input">
                 <label for="whats">Whatsapp <small>(Apenas numeros)</small></label>
-                <input oninput="Form.validateNumber()" id="whats" type="number" />
+                <input id="whats" type="number" />
               </div>
             </div>
 
@@ -171,7 +171,6 @@
             </div>
           </form>
         </div>
-
       </div>
     </section>
 

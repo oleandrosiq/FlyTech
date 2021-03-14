@@ -56,7 +56,9 @@ section.login div.container-login {
   background: #fff;
   -webkit-box-shadow: 0 0 20px #fff;
           box-shadow: 0 0 20px #fff;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -153,11 +155,25 @@ section.login div.container-login div.box-input div.group-inputs button:hover {
   opacity: .8;
 }
 
+section.login div.container-login a {
+  margin: -10px 0 30px 0;
+  text-decoration: none;
+  color: var(--color-red);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+section.login div.container-login a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 section.login div.container-dashboard {
   width: 700px;
   background: #fff;
   -webkit-box-shadow: 0 0 20px #fff;
           box-shadow: 0 0 20px #fff;
+  display: none;
 }
 
 section.login div.container-dashboard div.title-dashboard {

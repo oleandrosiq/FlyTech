@@ -1,0 +1,159 @@
+@media (max-width: 740px) {
+  
+  section.login {
+    background: initial;
+  
+    div.container-login {
+      width: 90%;
+      height: 500px;
+      
+      background: #fff;
+      box-shadow: 0 0 20px #fff;
+  
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      div.box-img {
+        width: 100%;
+      }
+  
+      div.box-input {
+        width: 100%;
+        height: 100%;
+  
+        background: var(--background-white);
+        padding: 20px;
+  
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+  
+        div.group-inputs {
+          width: 100%;
+  
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          margin-top: 30px;
+        }
+      }
+    }
+  
+    div.container-dashboard {
+      width: 90%;
+  
+      background: #fff;
+      box-shadow: 0 0 20px #fff;
+  
+      div.title-dashboard {
+        width: 100%;
+        height: 150px;
+
+        p {
+          color: var(--color-text-form);
+          padding: 10px 0 8px 0;
+        }
+  
+      }
+  
+      div.top-dashboard {
+        width: 100%;
+        height: 120px;
+  
+        padding: 20px;
+  
+        background: var(--background-white);
+  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        div.img {
+          width: 70px;
+          height: 70px;
+  
+          background: var(--background-input);
+          background-image: url('https://github.com/leandrosiq1.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 50px;
+          margin-right: 20px;
+        }
+  
+        div.input-img {
+          width: 80%;
+          height: 100%;
+  
+          padding: 10px;
+        }
+      }
+  
+      div.group-inputs-dashboard {
+        padding-top: 25px;
+  
+        div.two-input {
+          width: 100%;
+          height: 200px;
+          flex-direction: column;
+        }
+      }
+  
+      div.weekdays {
+        width: 100%;
+        margin-top: 20px;
+  
+        div.container-weekdays {
+          width: 100%;
+          display: initial;
+  
+          div.box-check {
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            ul {
+              list-style: none;
+              display: flex;
+              flex-wrap: wrap;
+  
+              li {
+                width: 130px;
+                height: 20px;
+  
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+              }
+            }
+          }
+  
+          div.box-time {
+            width: 100%;
+  
+            p {
+              padding-top: 25px;
+            }
+  
+            div.time-container {
+              width: 100%;
+  
+              display: flex;
+              align-items: center;
+              flex-direction: row-reverse;
+              justify-content: center;
+              gap: 20px;
+              
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

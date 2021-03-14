@@ -1,0 +1,178 @@
+@media (max-width: 740px) {
+  section.login {
+    background: initial;
+  }
+  section.login div.container-login {
+    width: 90%;
+    height: 500px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 20px #fff;
+            box-shadow: 0 0 20px #fff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.login div.container-login div.box-img {
+    width: 100%;
+  }
+  section.login div.container-login div.box-input {
+    width: 100%;
+    height: 100%;
+    background: var(--background-white);
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.login div.container-login div.box-input div.group-inputs {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 30px;
+  }
+  section.login div.container-dashboard {
+    width: 90%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 20px #fff;
+            box-shadow: 0 0 20px #fff;
+  }
+  section.login div.container-dashboard div.title-dashboard {
+    width: 100%;
+    height: 150px;
+  }
+  section.login div.container-dashboard div.title-dashboard p {
+    color: var(--color-text-form);
+    padding: 10px 0 8px 0;
+  }
+  section.login div.container-dashboard div.top-dashboard {
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    background: var(--background-white);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.login div.container-dashboard div.top-dashboard div.img {
+    width: 70px;
+    height: 70px;
+    background: var(--background-input);
+    background-image: url("https://github.com/leandrosiq1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    margin-right: 20px;
+  }
+  section.login div.container-dashboard div.top-dashboard div.input-img {
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+  }
+  section.login div.container-dashboard div.group-inputs-dashboard {
+    padding-top: 25px;
+  }
+  section.login div.container-dashboard div.group-inputs-dashboard div.two-input {
+    width: 100%;
+    height: 200px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.login div.container-dashboard div.weekdays {
+    width: 100%;
+    margin-top: 20px;
+  }
+  section.login div.container-dashboard div.weekdays div.container-weekdays {
+    width: 100%;
+    display: initial;
+  }
+  section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.login div.container-dashboard div.weekdays div.container-weekdays div.box-check ul li {
+    width: 130px;
+    height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time {
+    width: 100%;
+  }
+  section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time p {
+    padding-top: 25px;
+  }
+  section.login div.container-dashboard div.weekdays div.container-weekdays div.box-time div.time-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=conta.responsive.css.map */

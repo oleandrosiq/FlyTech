@@ -1,7 +1,6 @@
 const App = {
   init() {
     Rules.redirectWindow();
-    Modals.openViewRegisterSucess();
   },
 
   reload() {
@@ -11,25 +10,15 @@ const App = {
 
 const DOM = {
   display: document.querySelector("#displayAgent"),
-
-  addAgentDisplay(agent) {
-    this.display.innerHTML += agent;
-    console.log(agent);
-  }
 }
-
-console.log(DOM.display);
 
 const Modals = {
   openViewRegisterSucess() {
-    const submitForm = document.querySelector("#submitForm");
     const sectionForm = document.querySelector("#ladingForm");
     const modal = document.querySelector("#modalSucess");
 
-    submitForm.addEventListener('click', () => {
-      modal.style.display = "flex";
-      sectionForm.style.display = "none";
-    });
+    modal.style.display = "flex";
+    sectionForm.style.display = "none";
   }
 }
 
@@ -39,24 +28,73 @@ const Form = {
 
   stopSubmit(event) {
     event.preventDefault();
-    form = event.target;
 
-    this.formSubmit(form);
+    if (this.validateFields()) {  
+      console.log("Passei");
+    } else {
+      console.log("Não passei");
+    }
   },
 
-  formSubmit(form) {
-    
-    if (this.validateFields()) {
-      form.submit();
+  async sendToBackEnd(  ) {
+    const data = { profile, days, times, prices, selectService, bio } = this.getFields();
+    var weekday = [];
+
+    for (let day of days) {
+      if (day.classList[1] === "active") {
+        weekday.push(1);
+      } else {
+        weekday.push(0);
+      }
     }
 
+    var service;
+
+    switch (data.selectService) {
+      case "Barbeiro":
+        service = 1;
+      break;
+      case "Manicure":
+        service = 2;
+      break;
+      case "Manicure e Cabeleireiro(a)":
+        service = 3;
+      break;
+      case "Cabeleireiro(a)":
+        service = 4;
+      break;
+      default:
+        service = 3;
+    }
+
+   const user = { 
+     name: data.profile[0], 
+     email: data.profile[1], 
+     pass: data.profile[2], 
+     bio: data.bio,
+     image: data.profile[3],
+     max_p: data.prices[1],
+     min_p: data.prices[0],
+     type: service,
+     number: data.profile[4],
+     disp: `${data.times[1]}, ${data.times[0]}, ${weekday}`
+    }
+
+    try {
+      const result = await fetch("http://localhost:3000/create", {
+        method: "POST",
+        body: JSON.stringify(user)
+      });
+
+      console.log(result);
+
+    } catch (error) {
+      
+    }
   },
 
-  validateNumber() {
-    const input = document.querySelector("#whats");
-    number = input.value.split();
-
-    console.log(number.lenght);
+  getValuesDashboard() {
+    const dashboard = document.querySelector("#dashboard");
 
   },
 
@@ -87,43 +125,32 @@ const Form = {
       timeAte.trim() === "" ||
       timeDas.trim() === "" 
       ) {
+ 
+        Notification.requestPermission();
 
-      alert("Por favor, preencha todos os campos");
+        if (Notification.permission === 'granted') {
+          new Audio('/public/assets/notification.mp3').play();
+          new Notification("Ainda tem campos vazios", {
+            body: "Preencha todos os campos! 🚫",
+          })
+        }
 
       return;
     }
 
-    for (let day of fields.days) {
-      if (day.classList[1] === "active") {
-        console.log(day);
-      }
-    }
+    return true;
 
     // enviar os dados para o backend e dar um reload apagando a section e criando 
     // o html dos agents com base nos dados do backend e mostrando na tela
 
     // metodo criando html do agent
-    this.createHTMLAgent(
-      nameUser, emailUser, senhaUser, photoUser, whatsUser, bio, selectService,
-      priceMin, priceMax, timeAte, timeDas
-    );
-  },
-
-  validateProfileInputs(profile) {
-    const inputName = profile[0];
-    const inputEmail = profile[1];
-    const inputSenha = profile[2];
-    const inputPhoto = profile[3];
-    const inputWhats = profile[4];
-
-    
-    // alterar o state
   },
 
   getFields() {
     const form = document.querySelectorAll("#form input");
     const select = document.querySelector("#select");
     const textarea = document.querySelector("#bio");
+    
     return {
       profile: [ form[0].value, form[1].value, form[2].value, form[3].value, form [4].value ],
       days: [ form[7], form[8], form[9], form[10], form[11] ],
@@ -132,16 +159,19 @@ const Form = {
       selectService: select.value,
       bio: textarea.value
     }
-
-    // this.validateFields(form, select, textarea);
   },
 
   getDaysActive(element) {
     element.target.classList.toggle("active");
+    // enviar os dias ativos para o backEnd
   },
 
-  createHTMLAgent(nameUser, photoUser, whatsUser, bio, selectService,
-    priceMin, priceMax, timeAte, timeDas) {
+  // pegar os dados do back end
+  // nameUser, photoUser, whatsUser, bio, selectService,
+  // priceMin, priceMax, timeAte, timeDas, days
+
+  createHTMLAgent() {
+
     const HTML = `
       <div class="agent">
       <div class="profile">
@@ -232,24 +262,24 @@ const Form = {
             <p>Minimo - <span>R$${priceMin}</span></p>
             <p>Maximo - <span>R$${priceMax}</span></p>
           </div>
-
         </div>
 
-        <button type="button">
-          <img src="/public/assets/images/Vector.svg" alt="Entrar em contato via WhatsApp">
-          Entrar em contato
-        </button>
+        <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5519999669175&text=Tenho interesse em seu serviço de Cabeleireiro Leandro Siqueira" class="button" target="_blank">
+          <img src="/public/assets/images/Vector.svg" alt="Whatsapp">Entrar em contato
+        </a>
       </div>
     </div>
     `
       // Lembrar de integrar o whatsApp o link
-      DOM.addAgentDisplay(HTML);
+      
   }
 }
 
 const Rules = {
   addEventClick() {
     const days = document.querySelectorAll("li");
+    const btnAcessList = document.querySelector("#btnAcessList");
+    const btnAcessDashboard = document.querySelector("#btnAcessDashboard");
 
     if (window.location.pathname === "/public/views/home.html") {
       const solicitService = document.querySelector("#solicitService");
@@ -260,7 +290,7 @@ const Rules = {
       });
 
       getInFlestyle.addEventListener('click', () => {
-        window.location.href = "form.html";
+        window.location.href = "conta.html";
       });
     }
 
@@ -283,6 +313,14 @@ const Rules = {
     for (let day of days) {
       day.addEventListener('click', Form.getDaysActive);
     }
+
+    btnAcessList.addEventListener('click', () => {
+      window.location.href = "/public/views/agents.html";
+    });
+
+    btnAcessDashboard.addEventListener('click', () => {
+      window.location.href = "/public/views/conta.html";
+    });
 
   },
 

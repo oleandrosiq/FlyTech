@@ -65,26 +65,27 @@ const Form = {
         service = 3;
     }
 
-   const user = { 
-     name: data.profile[0], 
-     email: data.profile[1], 
-     pass: data.profile[2], 
-     bio: data.bio,
-     image: data.profile[3],
-     max_p: data.prices[1],
-     min_p: data.prices[0],
-     type: service,
-     number: data.profile[4],
-     disp: `${data.times[1]}, ${data.times[0]}, ${weekday}`
+    const user = {
+      name: data.profile[0], 
+      email: data.profile[1], 
+      pass: data.profile[2], 
+      bio: data.bio,
+      image: data.profile[3],
+      max_p: parseFloat(data.prices[1]),
+      min_p: parseFloat(data.prices[0]),
+      type: service,
+      number: `${data.profile[4]}`,
+      disp: `${data.times[1]}, ${data.times[0]}, ${weekday}`
     }
-
+    
     try {
       const result = await fetch("http://localhost:3000/create", {
         method: "POST",
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
         body: JSON.stringify(user)
-      });
-
-      console.log(result);
+      })
 
     } catch (error) {
       console.log(error);

@@ -7,8 +7,9 @@ router.get('/', (req: Request, res: Response) => {
     return res.render('../public/views/home.html')
 })
 
-router.post('/create', async (req: Request, res: Response) => {
-    const data = req.body
+router.post('/create', async (req: Request, res: Response) => {    
+    const data = await req.body
+
     if(!data.email || !data.pass || !data.name || !data.number || !data.image || !data.bio || !data.disp || !data.min_p || !data.max_p || !data.type){
         return res.status(400).send({ error: "Usuário inválido!" })
     } else {
